@@ -4,14 +4,13 @@
 
 Summary:    Xorg X11 rendition video driver
 Name:	    xorg-x11-drv-rendition
-Version:    4.2.5
-Release:    10%{?dist}
+Version:    4.2.6
+Release:    1%{?dist}
 URL:	    http://www.x.org
 License:    MIT
 Group:	    User Interface/X Hardware Support
 
 Source0:    ftp://ftp.x.org/pub/individual/driver/%{tarball}-%{version}.tar.bz2
-Patch0:	    0001-Remove-mibstore.h.patch
 
 ExcludeArch: s390 s390x
 
@@ -26,7 +25,6 @@ X.Org X11 rendition video driver.
 
 %prep
 %setup -q -n %{tarball}-%{version}
-%patch0 -p1
 
 %build
 autoreconf -vif
@@ -51,6 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man4/rendition.4*
 
 %changelog
+* Wed Nov 11 2015 Adam Jackson <ajax@redhat.com> 4.2.6-1
+- rendition 4.2.6
+
 * Mon Apr 28 2014 Adam Jackson <ajax@redhat.com> - 4.2.5-10
 - Fix rhel arch list
 
