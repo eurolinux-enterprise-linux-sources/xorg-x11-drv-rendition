@@ -4,8 +4,8 @@
 
 Summary:    Xorg X11 rendition video driver
 Name:	    xorg-x11-drv-rendition
-Version:    4.2.4
-Release:    1%{?dist}
+Version:    4.2.5
+Release:    2%{?dist}
 URL:	    http://www.x.org
 License:    MIT
 Group:	    User Interface/X Hardware Support
@@ -53,6 +53,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man4/rendition.4*
 
 %changelog
+* Wed Aug 22 2012 airlied@redhat.com - 4.2.5-2
+- rebuild for server ABI requires
+
+* Wed Aug 08 2012 Ben Skeggs <bskeggs@redhat.com> 4.2.5-1
+- upstream release 4.2.5 (rebase for 6.4)
+
 * Tue Jun 28 2011 Ben Skeggs <bskeggs@redhat.com> 4.2.4-1
 - upstream release 4.2.4
 
